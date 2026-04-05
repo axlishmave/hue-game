@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AxDevs | Hue Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  
+  <!-- Include Handlebars from a CDN -->
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script>
+  // compile the template
+  var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
+  // execute the compiled template and print the output to the console
+  console.log(template({ doesWhat: "rocks!" }));
+</script>
+</head>
+<body>
+    <div id="colorData"></div>
+</body>
+<script id="test" type="text/x-handlebars-template">
+  {{#each colors}}
+    <div id="{{id}}" class="color" style="background-color: {{rgb}};width:{{width}}%;height:{{height}}px" draggable="true" onclick="toggleInput()">
+      <!-- <span name="colorCodeName" style="color:{{contrast}};">{{name}}</span>
+      <span name="colorCodeRGB" style="color:{{contrast}};">{{rgb}}</span>
+      <span name="colorCodeHex" style="color:{{contrast}};" >{{hex}}</span> -->
+      {{#if index includeZero=true}}
+        <form onsubmit="changeColor()">
+          <input type="text" name="{{hex}}" style="display:none;" value="{{hex}}" index="{{index}}"></input>
+        </form>
+      {{/if}}
+    </div>
+  {{/each}}
+</script>
+<script src="js/main.js"></script>
+</html>
