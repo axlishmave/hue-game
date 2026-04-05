@@ -56,13 +56,21 @@ Download the repository and open: `index.html`in your browser.
 
 ## 📦 Installation
 
-`git clone https://github.com/axlishmave/hue-game
-cd hue-game`
+```
+git clone https://github.com/axlishmave/hue-game
+cd hue-game
+```
 Then open `index.html`.
 
-##🤝 Contributing
+---
+
+## 🤝 Contributing
+
 Suggestions, improvements, and pull requests are welcome.
 This project is meant to evolve, experiment, and grow over time.
 
-##📄 License
+---
+
+## 📄 License
+
 Feel free to use, modify, and build upon it.
